@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smit_flutter/components/menu_drawer_widget.dart';
 import 'package:smit_flutter/components/message_tile.dart';
+import 'package:smit_flutter/views/profile.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -42,7 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int bottomNavInd = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(floatingActionButton: FloatingActionButton(onPressed: (){
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
+    }),
       drawer: Drawer(
         child: Column(
           children: [
